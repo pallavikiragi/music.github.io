@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+      margin: 10px;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    .content-wrapper {
+      margin-top: 60px;
+    }
+
+    .stream-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stream-img {
+      width: 100px;
+      height: auto;
+    }
+
+    .stream-button {
+      padding: 10px 19px;
+      font-size: 1rem;
+      color: white;
+      border: 2px solid white;
+      background-color: transparent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .stream-button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .underline-link {
+      position: relative;
+      color: white;
+      text-decoration: none;
+    }
+
+    .underline-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.8);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .underline-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .right-heading {
+      margin-left: auto;
+      color: white;
+      font-weight: 500;
+    }
+
+    /* Responsive iframe */
+    .embed-responsive {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .embed-responsive iframe {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .right-heading {
+        font-size: 1.5rem;
+        position: static;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="container-fluid">
+
+    <!-- Header -->
+    <div class="row align-items-center">
+      <div class="col-12 col-md-auto">
+        <h1>
+          <a href="../homepage/index.html" class="underline-link" style="color: #ffffff;">Pallavi Kiragi</a> > Film
+          Scores
+        </h1>
+      </div>
+      <div class="col-12 col-md">
+      </div>
+      <div class="col-12 col-md-auto text-md-end">
+        <h1>
+          <a href="../infoabout/info.html" class="right-heading underline-link">About</a>
+        </h1>
+      </div>
+    </div>
+
+    <!-- TRACK SECTIONS -->
+
+    <!-- Nine -->
+    <div class="row content-wrapper">
+      <!-- Text Column (1/4 width on large screens) -->
+      <div class="col-lg-3 col-md-4">
+        <h2>Nine <br> | Short Film</h2>
+        <p><em><b>Release Date:</b> September 6, 2021</em><br>
+          <em><b>Collaboration:</b> Srishti Film</em><br>
+          <em><b>Genre:</b> Thriller, Eerie</em><br><br>
+          This short film, produced by my college seniors, explores eerie and suspenseful horror themes. To complement
+          its unsettling tone, I crafted a score that blends subtle, bass-driven melodies with tension-building
+          elements—such as voice samples, footsteps, and wooden textures. I layered in digital instrumentation using
+          VSTs, including synths and violins, to enhance the psychological unease while staying true to the film’s
+          haunting atmosphere.
+        </p>
+      </div>
+
+      <!-- Video Column (3/4 width on large screens) -->
+      <div class="col-lg-9 col-md-8">
+        <div class="ratio ratio-16x9"> <!-- Bootstrap 5 responsive embed -->
+          <iframe src="https://www.youtube.com/embed/9CoUYa5BCgA?si=hknhrDMbG1ugZxwd" title="YouTube video player"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- City lights -->
+    <div class="row content-wrapper">
+      <!-- Text Column (1/4 width on large screens) -->
+      <div class="col-lg-3 col-md-4">
+        <h2>City of Lights VHS Retro <br> | Music Video</h2>
+        <p><em><b>Release Date:</b> February 23, 2022</em><br>
+          <em><b>Collaboration:</b> Darkstar and Spitfireaudio</em><br>
+          <em><b>Genre:</b> Electronic, Progressive, Urban</em><br><br>
+          Created for a scoring contest hosted by @darkstar and @spitfireaudio, "City of Lights" is my musical
+          interpretation of a cityscape night drive. The track combines upbeat drums with progressive melodies, aiming
+          to capture the pulse, motion, and vibrancy of urban nightlife through sound.
+
+        </p>
+      </div>
+
+      <!-- Video Column (3/4 width on large screens) -->
+      <div class="col-lg-9 col-md-8">
+        <div class="ratio ratio-16x9"> <!-- Bootstrap 5 responsive embed -->
+          <iframe src="https://www.youtube.com/embed/guLQIKwroYQ?si=Bc8Dt_5J0YpYUPs9" title="YouTube video player"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bear hugs -->
+    <div class="row content-wrapper">
+      <!-- Text Column (1/4 width on large screens) -->
+      <div class="col-lg-3 col-md-4">
+        <h2>Bear Hugs <br> | Short Film</h2>
+        <p><em><b>Release Date:</b> September 6, 2021</em><br>
+          <em><b>Collaboration:</b> India Film Music</em><br>
+          <em><b>Genre:</b> Eerie, Narration</em><br><br>
+          Soundtrack application for the Indie Film Music Contest. A different twist on Toy Story which gives the
+          advantage of creating opposite tones. Used natural instruments like the strings to add emotion/feeling to
+          particular scenes. Also added my synth touch to blend in with the ensemble.
+
+
+        </p>
+      </div>
+
+      <!-- Video Column (3/4 width on large screens) -->
+      <div class="col-lg-9 col-md-8">
+        <div class="ratio ratio-16x9"> <!-- Bootstrap 5 responsive embed -->
+          <iframe src="https://www.youtube.com/embed/FqhZ_r8OOTY?si=ljYFGYxhV129Dl1K" title="YouTube video player"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Life Unfolding -->
+    <div class="row content-wrapper">
+      <!-- Text Column (1/4 width on large screens) -->
+      <div class="col-lg-3 col-md-4">
+        <h2>Life Unfolding <br> | Music Video</h2>
+        <p><em><b>Release Date:</b> June 22, 2022</em><br>
+          <em><b>Collaboration:</b> Artist Bruno Justi and Serge Ossipov</em><br>
+          <em><b>Genre:</b> Electronic, House, Phonk, Dance</em><br><br>
+          “Life Unfolding” is a two-part sonic journey exploring the essence of existence and creation. Rather than
+          mimicking commercial upbeat tones, the composition leans into a grounded, elegant, and magical
+          soundscape—inviting listeners into a vibrant yet introspective experience.
+
+          <br><b>Act I:</b> Into the Vortex of Creation – This segment represents the delicate emergence of life from the Vortex of
+          Absolute Consciousness, illustrating genesis through subtle textures and harmonics.
+
+          <br><b>Act II:</b> Vibration Precedes Manifestation – This phase explores the idea that before physical form, there is
+          vibration—an energetic build-up that eventually shapes the tangible world. It reflects life simply happening…
+          unfolding.
+        </p>
+      </div>
+
+      <!-- Video Column (3/4 width on large screens) -->
+      <div class="col-lg-9 col-md-8">
+        <div class="ratio ratio-16x9"> <!-- Bootstrap 5 responsive embed -->
+          <iframe src="https://drive.google.com/file/d/1LwCN1JvdnlRsEFPnnSCiuTM_amtgVyh7/preview"
+            title="YouTube video player" allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Background Scroll Logic -->
+  <script>
+    const sections = document.querySelectorAll('.content-wrapper');
+    const backgroundImages = ['horror1.png',
+      'city1.png',
+      'bear1.png',
+      'flower1.png'];
+
+    function updateBackground() {
+      let currentIndex = 0;
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - window.innerHeight / 2;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          currentIndex = index;
+        }
+      });
+      document.body.style.backgroundImage = `url('${backgroundImages[currentIndex]}')`;
+    }
+
+    window.addEventListener('scroll', updateBackground);
+    window.addEventListener('load', updateBackground); // 👈 run on page load
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

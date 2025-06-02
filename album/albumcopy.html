@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albums</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      /* Center the background horizontally and vertically */
+      color: white;
+      margin: 10px;
+      transition: background-image 0.5s ease-in-out;
+      /* Smooth transition for background change */
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      font-size: 60px;
+    }
+
+    h3 {
+      font-size: 45px;
+    }
+
+    ul {
+      font-size: 12px;
+    }
+
+    .content-wrapper {
+      margin-top: 60px;
+    }
+
+    .first-column second-column p {
+      font-size: 12px;
+    }
+
+    .second-column {
+      padding-top: 5%;
+    }
+
+    .third-column {
+      padding-top: 5%;
+    }
+
+    .fourth-column {
+      padding-top: 5%;
+    }
+
+    .tracklist_div {
+      padding-top: 5%;
+    }
+
+    .tracklist_img {
+      width: 100%;
+    }
+
+    .tracklist-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .tracklist-body {
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .grid-scroll-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-top: 40px;
+    }
+
+    .grid-container {
+      display: inline-flex;
+      gap: 21px;
+    }
+
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+    }
+
+    .image-container {
+      position: relative;
+      width: 130px;
+      height: auto;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      /* black with opacity */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      text-transform: uppercase;
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+
+    .right-heading {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 50px;
+      color: white;
+      z-index: 3;
+      animation: slideInRight 1s ease-out;
+      font-weight: normal;
+      text-decoration: none;
+      /* removes underline */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- Top Left Heading -->
+    <div class="row">
+      <div class="col-12">
+        <h1>
+          <a style="text-decoration: none; color: #ffffff;" href="index.html">
+            <span>Pallavi Kiragi</span>
+          </a>
+          > ALBUM
+        </h1>
+        <a href="../infoabout/info.html" class="right-heading">Info</a>
+
+      </div>
+    </div>
+
+    <!-- Content Section - Going places album -->
+
+    <div class="row content-wrapper">
+      <div class="col-md-4 first-column">
+        <h2>Going <br> Places | EP</h2>
+        <p class="tracklist-body"><br>
+          <em><b>Release Date: December 31, 2020</b></em><br>
+          <em><b>Distributor: Horus Music</b></em><br><br>
+
+          The project explores a sci-fi and electronic score-inspired sound, featuring a dynamic blend of ambient,
+          melodic, and hard-hitting tracks. Entirely instrumental, the compositions are built using soft synth layers,
+          gritty basslines, and textured drum patterns.
+          The EP showcases a cinematic sonic journey—most notably in tracks like <b>“Blade Runner”,</b> which draws
+          inspiration from the iconic film’s futuristic imagery and sound design, and <b>“Conflict”,</b> which captures
+          emotional tension through immersive sound layering and automation.<br>
+
+          This release reflects my early experimentation with atmospheric storytelling through electronic music
+          production and continues to be a defining point in my sound direction.
+
+        </p>
+        <!-- Your content here -->
+      </div>
+      <div class="col-md-4">
+        <img src="EP Cover new name.jpg" alt="Sample Image" class="img-fluid">
+      </div>
+      <div class="col-md-4">
+        <!-- <img src="EP Cover.png" alt="Sample Image" class="img-fluid"> -->
+        <p><em>Hover to view track names</em></p>
+        <div class="grid-scroll-wrapper">
+          <div class="grid-container">
+            <!-- <div style="display: flex; flex-wrap: wrap; gap: 21px; padding-top: 40px"> -->
+            <div class="image-container">
+              <img src="ept1.png" alt="Sample Image">
+              <div class="overlay">Conflict</div>
+            </div>
+            <div class="image-container">
+              <img src="ept2.png" alt="Sample Image">
+              <div class="overlay">Blade Runner</div>
+            </div>
+            <div class="image-container">
+              <img src="ept3.png" alt="Sample Image">
+              <div class="overlay">Solitude</div>
+            </div>
+            <div class="image-container">
+              <img src="ept4.png" alt="Sample Image">
+              <div class="overlay">Player</div>
+            </div>
+            <div class="image-container">
+              <img src="ept5.png" alt="Sample Image">
+              <div class="overlay">Fast Forward</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-4 second-column">
+        <h3>Tracklist</h3>
+        <p class="tracklist-body"><br><b>CONFLICT</b><br>
+          <em>“Peace is not the absence of conflict but the presence of creative alternatives for responding to conflict
+            -- alternatives to passive or aggressive responses, alternatives to violence.”
+            ― Dorothy Thompson</em>
+          <br><br>
+          <b>BLADE RUNNER</b><br>
+          <em>"More human than human" is our motto - JOE TURKEL ― Dr. Eldon Tyrell</em>
+          <br><br>
+          <b>PLAYER</b><br>
+          <!-- “Absolute is a game with only one player where Absolute forgets itself so it would have a reason to fulfill the motion while returning.”
+― Dejan Stojanovic, The Sun Watches the Sun -->
+          <em>"Players are artists who create their own reality within the game." ― Shigeru Miyamoto</em>
+          <!-- Mentally, the only players who survive in the pros are the ones able to manage all their responsibilities.  - Tom Brady
+Even a good player will someday become a toy of a better player. its called karma
+Big time player make big time plays- Santana Moss
+life is a game. a player who knows every trick will win the game - lokesh khichi -->
+          <br><br>
+          <b>SOLITUDE</b><br>
+          <!-- “Solitude is fine but you need someone to tell that solitude is fine.”
+― Honoré de Balzac -->
+          <!-- “Solitude gives birth to the original in us, to beauty unfamiliar and perilous - to poetry. But also, it gives birth to the opposite: to the perverse, the illicit, the absurd.”
+― Thomas Mann, Death in Venice and Other Tales -->
+          <em>"Solitude is not the absence of company, but the moment when our soul is free to speak to us and help us
+            decide what to do with our life." ― Paulo Coelho</em>
+          <!-- Solitude is the place of purification and transformation, the place of the great struggle and the great encounter. Henri Nouwen -->
+          <br><br>
+          <b>FAST FORWARD</b><br>
+          <!-- Wish you could fast forward though time and see if things will work out in the end
+maybe thats why life is so precious. no rewind or fast forward...just patience and faith - cristina marrero -->
+          <em>"Sometimes I wish life had a fast forward button" ― dan chopin</em>
+        </p>
+      </div>
+
+      <div class="col-md-8 tracklist_div">
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/album/5Ex1C3YNIHKNTzL4frwpw9?si=mbfcs-MvQ6uL4y_GqAErJg" width="970px"
+          height="452" frameborder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+
+      <div class="col-md-6 third-column">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/RCMjRIJ4M08" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6 fourth-column">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?si=Kf8yLvA-E11hYWP4"
+          frameborder="0" allowfullscreen></iframe>
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Content Section - Insights album -->
+
+  <div class="row content-wrapper">
+    <div class="col-md-4 first-column">
+
+      <h2>Insights <br> | Album</h2>
+      <p class="tracklist-body"><br>
+        <em><b>Release Date: January 5, 2024</b></em><br>
+        <em><b>Distributor: Horus Music</b></em><br><br>
+
+        Crafted over two years, this 12-track instrumental album reflects a personal journey of creative growth and
+        emotional exploration. Born during the pandemic from a period of mental block, it rekindles inspiration through
+        gratitude and cinematic influences. Blending experimental electronic music with film scoring techniques, the
+        album is structured in three phases—starting with ambient orchestral sounds, transitioning to synth-heavy
+        compositions, and concluding with rhythmic, melodic tracks. Designed to suit a range of moods and moments, each
+        piece evokes vivid imagery and emotional depth.
+      </p>
+      <!-- Your content here -->
+    </div>
+    <div class="col-md-4">
+      <img src="insightsfinal.png" alt="Sample Image" class="img-fluid">
+    </div>
+    <div class="col-md-4">
+      <p><em>Hover to view track names</em></p>
+      <!-- <img src="insightstrack.png" alt="Sample Image" class="img-fluid"> -->
+
+
+      <!-- <div style="display: flex; flex-wrap: wrap; gap: 21px; padding-top: 40px"> -->
+      <div class="grid-scroll-wrapper">
+        <div class="grid-container">
+          <div class="image-column">
+            <div class="image-container">
+              <img src="t1.jpg" alt="Sample Image">
+              <div class="overlay">Commencement</div>
+            </div>
+            <div class="image-container">
+              <img src="t2.jpg" alt="Sample Image">
+              <div class="overlay">Sands Unfold</div>
+            </div>
+            <div class="image-container">
+              <img src="t3.jpg" alt="Sample Image">
+              <div class="overlay">Voyager</div>
+            </div>
+          </div>
+          <div class="image-column">
+            <div class="image-container">
+              <img src="t4.jpg" alt="Sample Image">
+              <div class="overlay">Reminisce</div>
+            </div>
+            <div class="image-container">
+              <img src="t5.jpg" alt="Sample Image">
+              <div class="overlay">Parallel Sync</div>
+            </div>
+            <div class="image-container">
+              <img src="t6.jpg" alt="Sample Image">
+              <div class="overlay">City OS</div>
+            </div>
+          </div>
+          <div class="image-column">
+            <div class="image-container">
+              <img src="t7.jpg" alt="Sample Image">
+              <div class="overlay">Wanted Rift</div>
+            </div>
+            <div class="image-container">
+              <img src="t8.jpg" alt="Sample Image">
+              <div class="overlay">Purple Phantom</div>
+            </div>
+            <div class="image-container">
+              <img src="t9.jpg" alt="Sample Image">
+              <div class="overlay">Electrifying</div>
+            </div>
+          </div>
+          <div class="image-column">
+            <div class="image-container">
+              <img src="t10.jpg" alt="Sample Image">
+              <div class="overlay">Epilogue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 second-column">
+      <h3>Tracklist</h3>
+      <p class="tracklist-body">
+
+        <br>
+        The album begins with a transitional piece marking a shift in production style, followed by an ambient track
+        inspired by Middle Eastern and Indian cultures. It moves into a nature-driven, adventurous composition evoking
+        fantasy and exploration, then a reflective piece about memories shaping the future. Two interludes serve as
+        transitions—first from organic to electronic sounds, and later to more melodic, drum-heavy elements. The central
+        tracks explore digital and urban landscapes with synth-heavy, cinematic soundscapes, gritty rock-infused energy,
+        and street-culture influences. The final tracks embrace EDM-inspired rhythms and conclude with a glitchy,
+        experimental piece symbolizing a new chapter.
+
+        <br><br>
+
+        <em><b>Highlight tracks:</b> Purple Phantom, Sands Unfold, CityOS</em>
+      </p>
+
+    </div>
+    <div class="col-md-8 tracklist_div">
+      <iframe style="border-radius:12px"
+        src="https://open.spotify.com/embed/album/3xDC3qxEfp8Kqb91J8gaIb?utm_source=generator" width="100%" height="500"
+        frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    <div class="col-md-6 third-column">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/EolWX-z3SKA?si=atpJnoXchktq2TRQ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-6 fourth-column">
+
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/LriUNUosBBo?si=LKiy-8YX0pVfn3bm"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    // Array of background images and corresponding sections
+    const sections = document.querySelectorAll('.content-wrapper');
+    const backgroundImages = [
+      '2.gif',
+      '3.gif'
+    ];
+
+    // Change background based on scroll position
+    window.addEventListener('scroll', () => {
+      let currentIndex = 0;
+
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - window.innerHeight / 2; // Adjust trigger point
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          currentIndex = index;
+        }
+      });
+
+      // Update background image
+      document.body.style.backgroundImage = `url('${backgroundImages[currentIndex]}')`;
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

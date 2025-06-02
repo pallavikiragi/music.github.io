@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+      margin: 10px;
+      transition: background-image 0.5s ease-in-out;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    .content-wrapper {
+      margin-top: 60px;
+    }
+
+    .stream-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stream-img {
+      width: 100px;
+      height: auto;
+    }
+
+    .stream-button {
+      padding: 10px 19px;
+      font-size: 1rem;
+      color: white;
+      border: 2px solid white;
+      background-color: transparent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .stream-button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .underline-link {
+      position: relative;
+      color: white;
+      text-decoration: none;
+    }
+
+    .underline-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.8);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .underline-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .right-heading {
+      margin-left: auto;
+      color: white;
+      font-weight: 500;
+    }
+
+    /* Responsive iframe */
+    .embed-responsive {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .embed-responsive iframe {
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .right-heading {
+        font-size: 1.5rem;
+        position: static;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <div class="container-fluid">
+
+    <!-- Header -->
+    <div class="row align-items-center">
+      <div class="col-12 col-md-auto">
+        <h1>
+          <a href="../homepage/index.html" class="underline-link" style="color: #ffffff;">Pallavi Kiragi</a> > Film
+          Scores
+        </h1>
+      </div>
+      <div class="col-12 col-md">
+      </div>
+      <div class="col-12 col-md-auto text-md-end">
+        <h1>
+          <a href="../infoabout/info.html" class="right-heading underline-link">About</a>
+        </h1>
+      </div>
+    </div>
+
+    <!-- TRACK SECTIONS -->
+
+    <!-- Nine -->
+    <div class="row content-wrapper">
+      <!-- Text Column (1/4 width on large screens) -->
+
+      <div class="col-md-6 third-column mb-4">
+        <h3>Cultural Sounds<br> | Explorations</h3>
+        <iframe title="vimeo-player" src="https://player.vimeo.com/video/1089470649?h=3226c703fa" width="100%"
+          height="500" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <!-- Second Video -->
+      <div class="col-md-6 fourth-column mb-4">
+        <h3>Nolans Movies<br> | Remix</h3>
+        <iframe style="padding-top: 50px;" width="100%" height="450"
+          src="https://www.youtube.com/embed/rARGeSVnWGA?si=iDCTA-9I_FlYGWmg" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+    <!-- Soundcloud -->
+    <div class="row content-wrapper justify-content-start">
+      <h4 class="mb-4 w-100">Other Demos</h4>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div style="padding:100% 0 0 0;position:relative;"><iframe
+            src="https://player.vimeo.com/video/1089466563?h=d9865007d2&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Assassins Creed Edit"></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div style="padding:100% 0 0 0;position:relative;"><iframe
+            src="https://player.vimeo.com/video/1089466575?h=6f4faaa640&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Demo3."></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <iframe width="100%" height="480" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1363570228&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+        <div
+          style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+          <a href="https://soundcloud.com/pkay99" title="Pkay" target="_blank"
+            style="color: #cccccc; text-decoration: none;">Pkay</a> · <a
+            href="https://soundcloud.com/pkay99/drive-away-remix" title="Krewella - Drive Away Remix" target="_blank"
+            style="color: #cccccc; text-decoration: none;">Krewella - Drive Away Remix</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row content-wrapper justify-content-start">
+      <!-- <h4 class="mb-4 w-100">Other Demos</h4> -->
+
+      <div class="col-12 col-md-4 mb-4">
+        <div style="padding:177.78% 0 0 0;position:relative;"><iframe
+            src="https://player.vimeo.com/video/1089466796?h=0efed2e479&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="neon"></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div style="padding:200% 0 0 0;position:relative;"><iframe
+            src="https://player.vimeo.com/video/1089466722?h=f8f2f04e26&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="demo3"></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div style="padding:177.78% 0 0 0;position:relative;"><iframe
+            src="https://player.vimeo.com/video/1089466642?h=5689f778a0&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" title="calm"></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Background Scroll Logic -->
+  <script>
+    const sections = document.querySelectorAll('.content-wrapper');
+    const backgroundImages = ['3cult.png',
+      'nolan.jpg',
+      'neon.jpg', 'geo.jpg'];
+
+    function updateBackground() {
+      let currentIndex = 0;
+      sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop - window.innerHeight / 2;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          currentIndex = index;
+        }
+      });
+      document.body.style.backgroundImage = `url('${backgroundImages[currentIndex]}')`;
+    }
+
+    window.addEventListener('scroll', updateBackground);
+    window.addEventListener('load', updateBackground); // 👈 run on page load
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
