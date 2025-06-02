@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKaymusic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'abc-diatype-regular';
+            src: url('./fonts/abc-diatype-regular.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* overflow-x: hidden; */
+            font-family: 'abc-diatype-regular';
+        }
+
+        div.b {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            display: inline-block;
+            height: 360px;
+            /*width: 160px;*/
+            margin-right: 12px;
+            background-color: black;
+            /* Background for the entire box */
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            /* Optional rounded corners */
+        }
+
+        div.b h1 {
+            margin: 0;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
+
+        /* Carousel Item Transition */
+        .carousel-item {
+            transition: transform 1s cubic-bezier(0.1, 0, 0, 1) !important;
+        }
+
+        /* Bootstrap Carousel Styles */
+        .carousel-item img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+            /* Set the slider z-index to 0 */
+        }
+
+        /* Banner Content (Overlay + Text) */
+        .banner {
+            position: absolute;
+            /* Change to absolute to place it above carousel */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            color: white;
+            z-index: 999;
+            /* Set the banner z-index to 999 to ensure it appears on top */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            /* padding: 20px; */
+            animation: fadeUp 2s ease-out 1s forwards;
+            width: 100%;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content h1 {
+            font-size: 50px;
+            margin-bottom: 1rem;
+            text-align: left;
+            animation: slideInLeft 1s ease-out;
+            font-weight: normal;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .gap {
+            margin-bottom: 5%;
+        }
+
+        .content h2 {
+            font-size: 25px;
+            margin-bottom: 1rem;
+            text-align: left;
+            animation: fadeIn 1.5s ease-out 0.5s forwards;
+        }
+
+        .content p {
+            width: 80%;
+            font-size: 14px;
+            margin-bottom: 2rem;
+            text-align: left;
+            animation: fadeIn 1.5s ease-out 1s forwards;
+        }
+
+        .item-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: flex-start;
+            list-style: none;
+            padding: 0;
+            animation: fadeIn 2s ease-out 1.5s forwards;
+        }
+
+        .item-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: listItemFadeIn 0.5s ease-out forwards;
+            margin-bottom: -35px;
+        }
+
+        @keyframes listItemFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .item-list li span {
+            font-size: 30px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255 255 255 / 86%);
+            color: #00000091;
+            font-weight: bold;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .item-list li:hover span {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: rotate(360deg);
+        }
+
+        .item-list li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 45px;
+        }
+
+        .item-list li:hover a {
+            color: grey;
+        }
+
+        .span {
+            margin-bottom: 25px;
+        }
+
+        .span a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .span a:hover {
+            color: #00d5ff;
+            transform: translateX(10px);
+        }
+
+        .right-heading {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 50px;
+            color: white;
+            z-index: 3;
+            animation: slideInRight 1s ease-out;
+            font-weight: normal;
+            text-decoration: none;
+            /* removes underline */
+        }
+
+
+        .right-heading a {
+            color: white;
+            /* Inherit white color */
+            text-decoration: none;
+            /* Remove underline */
+            font-weight: inherit;
+            /* Match parent weight */
+        }
+
+        .content.container {
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 0;
+            margin-bottom: 30px;
+        }
+
+        .top-bar h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+
+        .top-bar h1 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .info-link {
+            font-size: 50px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .info-link {
+            font-size: 30px;
+        }
+
+        .info-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 1400px) {
+            .content {
+                max-width: 1500px !important;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .content>div[style*="display: flex"] {
+                flex-direction: column !important;
+            }
+
+            .b {
+                margin: 20px 0;
+                height: auto;
+                writing-mode: horizontal-tb;
+                text-align: center;
+            }
+
+            .b h1 {
+                font-size: 20px;
+            }
+
+            iframe {
+                width: 100%;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content>div>div>div {
+                flex: 1 1 33.33%;
+                margin-bottom: 10px;
+            }
+
+            .content img.img-fluid {
+                width: 80% !important;
+                height: auto;
+            }
+
+            .track-section {
+                flex-direction: row !important;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                align-items: flex-start !important;
+            }
+
+            .track-section .b {
+                height: 266px;
+                /* writing-mode: horizontal-tb; */
+                margin-right: 10px;
+                white-space: nowrap;
+                writing-mode: sideways-lr;
+            }
+
+            .track-section iframe {
+                width: 300px;
+                height: 400px;
+            }
+
+            .banner {
+                overflow-y: auto;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .item-list li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-list li a {
+                font-size: 18px;
+            }
+
+            .item-list li span {
+                width: 30px;
+                height: 30px;
+                font-size: 20px;
+            }
+            .top-bar {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .top-bar h1 {
+                font-size: 30px;
+            }
+
+            .info-link {
+                font-size: 30px;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+            .right-heading {
+                font-size: 25px;
+            }
+
+            .content h1 {
+                font-size: 25px;
+            }
+
+            .content p {
+                width: 100% !important;
+            }
+
+            .span {
+                margin-bottom: 30px;
+            }
+
+            .item-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 10px;
+                padding: 0;
+            }
+
+            .item-list li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 48%;
+                background-color: rgba(255, 255, 255, 0.05);
+                padding: 8px 12px;
+                border-radius: 8px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                transition: background-color 0.3s ease;
+            }
+
+            .item-list li:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            .item-list li span {
+                width: 28px;
+                height: 28px;
+                font-size: 16px;
+                min-width: 28px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 255, 255, 0.85);
+                color: #000000cc;
+                font-weight: bold;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .item-list li a {
+                font-size: 14px;
+                color: #fff;
+                text-decoration: none;
+                line-height: 1.2;
+                flex: 1;
+                transition: color 0.3s ease;
+            }
+
+
+            .item-list li a {
+                word-break: break-word;
+            }
+
+            .overlay {
+                height: 140%;
+            }
+
+            .b {
+                /* margin: 20px 0; */
+                height: 353px;
+                word-spacing: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Bootstrap Slider (Carousel) -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="1.gif" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="2.gif" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="3.gif" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="4.gif" class="d-block w-100" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="5.gif" class="d-block w-100" alt="Image 5">
+            </div>
+            <div class="carousel-item">
+                <img src="6.gif" class="d-block w-100" alt="Image 6">
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Content Positioned on Top -->
+    <div class="banner">
+        <div class="overlay"></div>
+        <div class="content container">
+            <div class="top-bar">
+                <h1>
+                    <a href="index.html">Pallavi Kiragi</a>
+                </h1>
+                <a href="../infoabout/info.html" class="info-link">Info</a>
+            </div>
+
+
+            <div class="gap"></div>
+            <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+                <div style="flex: 1; padding-right: 20px;">
+                    <h2>Musician | Composer | Designer</h2>
+                    <p style="font-size: 14px;">
+                        Driven by synths, storytelling, and the art of sound design specializing in electronic music in
+                        the domain of media,
+                        music compositions and film scoring.
+                        <br><br>
+                        My musical style is exploratory and experimental, blending intricate sound design with
+                        storytelling elements to craft emotionally resonant and visually inspired compositions.
+                    </p>
+
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 0px; padding-top: 40px">
+                        <div>
+                            <img src="spotify.png" alt="Sample Image" class="img-fluid"
+                                style="width: 60%; height: auto;">
+                        </div>
+                        <div>
+                            <img src="apple.png" alt="Sample Image" class="img-fluid" style="width: 60%; height: auto;">
+                        </div>
+                        <div>
+                            <img src="youtube.png" alt="Sample Image" class="img-fluid"
+                                style="width: 60%; height: auto;">
+                        </div>
+                        <div>
+                            <img src="soundcloud.png" alt="Sample Image" class="img-fluid"
+                                style="width: 60%; height: auto;">
+                        </div>
+                        <div>
+                            <img src="bandcamp.png" alt="Sample Image" class="img-fluid"
+                                style="width: 60%; height: auto;">
+                        </div>
+                        <div>
+                            <img src="tidal.png" alt="Sample Image" class="img-fluid" style="width: 60%; height: auto;">
+                        </div>
+                        <div>
+                            <img src="amazon.png" alt="Sample Image" class="img-fluid"
+                                style="width: 60%; height: auto;">
+                        </div>
+                    </div>
+                </div>
+                <div class="track-section" style="display: flex; align-items: center; gap: 10px;">
+                    <div class="b">
+                        <h1><b>NEW TRACK</b></h1>
+                    </div>
+                    <div style="flex: 0 0 auto; text-align: right;">
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/playlist/1RjBTMgDjyEHC6cTAe7TPH?utm_source=generator"
+                            width="600" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="span">
+            </div>
+
+            <ul class="item-list">
+                <li><span>1</span> <a href="../album/album.html">Albums</a></li>
+                <li><span>2</span> <a href="../singles/single25.html">Singles</a></li>
+                <li><span>3</span> <a href="../filmscores/film.html">Short Film Scores</a></li>
+                <li><span>4</span> <a href="../demos/demo.html">Demos and Remixes</a></li>
+                <li><span>5</span> <a href="../dj mixes/djmixes.html">DJ Mixes</a></li>
+                <li><span>6</span> <a href="../press/press.html">Magazines and Blogs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
